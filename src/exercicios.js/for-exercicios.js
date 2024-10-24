@@ -110,3 +110,14 @@
 //Exercício 10: Reverter uma string
 //Dada uma string, use um loop para imprimi-la de trás para frente.
 
+// function reverseString(str) {
+//     let stringReverse = '';
+    
+//     for (let i = str.length - 1; i >= 0; i--) {
+//         stringReverse += str[i];
+//     }    return stringReverse;
+// }
+
+// const myString = 'Esse sou eu ao contrário!'
+// const result = reverseString(myString)
+// console.log(result)
