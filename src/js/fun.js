@@ -43,21 +43,23 @@ console.log(FirstName('Rafaela Costa'))
 // funcao que calcule o IMC do paciente
 
 function GetIMC (peso, altura) {
-
-    let imc = peso / (altura * altura)
-    if(imc <= 18.5) {
-        return console.log('abaixo do peso normal')
-    }else (imc <= 0) {
-       return console.log('peso indefinido')
-    } else if(imc  >= 18.5 && imc  >= 24.99) {
-        return console.log('peso normal')
-    } else if(imc  >= 25 && imc  <= 29.99) {
-        return console.log('Sobrepeso') 
-    } else if (imc  >= 30 && imc  <= 34.90) {
-        return console.log('Obesidade')
-    }else (imc <= 0) {
-    return console.log('peso indefinido')
+    return peso / altura ** 2
 }
-}
-
+const IMC = GetIMC(60, 1.83)
+    switch(true) {
+        case IMC === 10:
+            console.log('passou com excelencia')
+            break
+        case IMC <= 9 && IMC >= 7:
+            console.log('passou')
+            break
+        case IMC >= 4 && IMC <= 6:
+            console.log('recuperação')
+            break
+        case IMC >= 0 && IMC <=3:
+            console.log('tente outra vez, reprova baixo. nengue') 
+            break
+        default:
+            console.log('coloca uma nota valida')
+    }
 console.log(`Seu IMC é ${GetIMC(60, 1.83)}`)
